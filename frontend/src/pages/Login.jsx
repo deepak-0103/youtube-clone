@@ -1,63 +1,34 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext.jsx";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import API from "../services/api";
 
-const Login = ()=>{
+function Login() {
+  const { setCurrentUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-const [email,setEmail] = useState("");
-const [password,setPassword] = useState("");
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5000/api/auth/login", {
+        email: e.target.email.value,
+        password: e.target.password.value
+      });
+      setCurrentUser(res.data); // update context
+      localStorage.setItem("user", JSON.stringify(res.data)); // persist
+      navigate("/"); // redirect to homepage
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-const navigate = useNavigate();
-
-const login = async ()=>{
-
-try{
-
-const res = await API.post("/auth/login",{
-email,
-password
-});
-
-localStorage.setItem("token",res.data.token);
-localStorage.setItem("username",res.data.username);
-
-navigate("/");
-
-}catch{
-
-alert("Invalid login");
-
+  return (
+    <form onSubmit={handleLogin}>
+      <input name="email" placeholder="Email" />
+      <input name="password" placeholder="Password" type="password" />
+      <button>Login</button>
+    </form>
+  );
 }
-
-};
-
-return(
-
-<div className="auth-page">
-
-<h2>Sign In</h2>
-
-<input
-placeholder="Email"
-value={email}
-onChange={(e)=>setEmail(e.target.value)}
-/>
-
-<input
-type="password"
-placeholder="Password"
-value={password}
-onChange={(e)=>setPassword(e.target.value)}
-/>
-
-<button onClick={login}>
-Login
-</button>
-
-</div>
-
-);
-
-};
 
 export default Login;

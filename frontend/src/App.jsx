@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import VideoPlayer from "./pages/VideoPlayer";
 import Channel from "./pages/Channel";
-import Auth from "./pages/Auth";
+import Auth from "./pages/auth";
 import VideoChannel from "./pages/VideoChannel";
 import ChannelVideos from "./pages/ChannelVideos";
 import UploadVideo from "./pages/UploadVideo";
