@@ -1,63 +1,55 @@
-import { useEffect,useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../services/api";
-import VideoCard from "../components/VideoCard";
 
 const Channel = () => {
 
 const username = localStorage.getItem("username");
-
 const [channelName,setChannelName] = useState("");
-const [description,setDescription] = useState("");
-const [videos,setVideos] = useState([]);
+const navigate = useNavigate();
 
+const createChannel = async () => {
 
-// create channel
-const createChannel = async ()=>{
+if(!channelName.trim()){
+alert("Enter channel name");
+return;
+}
 
-await API.post("/channel/create",{
+try{
+
+const res = await API.post("/channel/create",{
 name:channelName,
-description,
 owner:username
 });
 
-alert("Channel Created");
+if(res.status === 201){
 
-loadVideos();
+alert("Channel created successfully");
 
-};
+// redirect to channel page
+navigate(`/channel/${channelName}`);
 
-
-// load channel videos
-const loadVideos = async ()=>{
-
-const res = await API.get(`/channel/${channelName}`);
-
-setVideos(res.data);
-
-};
-
-useEffect(()=>{
-
-if(channelName){
-loadVideos();
 }
 
-},[channelName]);
+}catch(err){
 
+console.error(err);
 
-const deleteVideo = async (id)=>{
+if(err.response?.data?.message){
+alert(err.response.data.message);
+}else{
+alert("Channel creation failed");
+}
 
-await API.delete(`/videos/${id}`);
-
-loadVideos();
+}
 
 };
 
 return(
 
-<div>
+<div className="channel-page">
 
-<h2>My Channel</h2>
+<h2>Create Channel</h2>
 
 {!username ? (
 
@@ -65,20 +57,13 @@ return(
 
 ):( 
 
-<div>
-
-<h3>Create Channel</h3>
+<div className="create-channel">
 
 <input
-placeholder="Channel Name"
+type="text"
+placeholder="Enter Channel Name"
 value={channelName}
 onChange={(e)=>setChannelName(e.target.value)}
-/>
-
-<input
-placeholder="Description"
-value={description}
-onChange={(e)=>setDescription(e.target.value)}
 />
 
 <button onClick={createChannel}>
@@ -88,32 +73,6 @@ Create Channel
 </div>
 
 )}
-
-<hr/>
-
-<h3>Channel Videos</h3>
-
-<div className="video-grid">
-
-{videos.map(v => (
-
-<div key={v._id}>
-
-<VideoCard video={v}/>
-
-<button>
-Edit
-</button>
-
-<button onClick={()=>deleteVideo(v._id)}>
-Delete
-</button>
-
-</div>
-
-))}
-
-</div>
 
 </div>
 

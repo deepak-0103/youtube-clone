@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const channelSchema = new mongoose.Schema({
 
 name:String,
-owner:String,   // userId
+owner:String,
+icon:String,
 description:String
 
 });

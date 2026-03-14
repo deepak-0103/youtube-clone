@@ -8,6 +8,10 @@ import Home from "./pages/Home";
 import VideoPlayer from "./pages/VideoPlayer";
 import Channel from "./pages/Channel";
 import Auth from "./pages/Auth";
+import VideoChannel from "./pages/VideoChannel";
+import ChannelVideos from "./pages/ChannelVideos";
+import UploadVideo from "./pages/UploadVideo";
+
 
 
 
@@ -34,9 +38,12 @@ setSearch={setSearch}
 
 <Route path="/" element={<Home search={search}/>}/>
 <Route path="/video/:id" element={<VideoPlayer/>}/>
-<Route path="/channel/:id" element={<Channel/>}/>
+<Route path="/mychannel" element={<Channel/>}/>
 <Route path="/login" element={<Auth/>}/>
 <Route path="/channel" element={<Channel/>}/>
+<Route path="/channel/:channelName" element={<VideoChannel />} />
+<Route path="/channel/:name" element={<ChannelVideos/>}/>
+<Route path="/upload" element={<UploadVideo/>}/>
 </Routes>
 
 </BrowserRouter>

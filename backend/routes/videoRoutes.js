@@ -3,6 +3,24 @@ import Video from "../models/Video.js";
 
 const router = express.Router();
 
+router.get("/channel/:name", async (req,res)=>{
+
+try{
+
+const videos = await Video.find({
+channelName:req.params.name
+});
+
+res.json(videos);
+
+}catch(err){
+
+res.status(500).json({message:"Error fetching channel videos"});
+
+}
+
+});
+
 router.get("/", async(req,res)=>{
  const {category} = req.query;
 
@@ -37,3 +55,4 @@ router.delete("/:id", async(req,res)=>{
 });
 
 export default router;
+

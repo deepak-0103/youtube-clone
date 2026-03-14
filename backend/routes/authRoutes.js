@@ -5,63 +5,34 @@ import User from "../models/User.js";
 
 const router = express.Router();
 
-const SECRET = "youtubeclonejwt";
+router.post("/register", async(req,res)=>{
+ const {username,email,password}=req.body;
 
-// REGISTER
-router.post("/register", async (req,res)=>{
+ const hashed = await bcrypt.hash(password,10);
 
-try{
+ const user = new User({
+  username,email,password:hashed
+ });
 
-const {username,email,password} = req.body;
+ await user.save();
 
-const hashedPassword = await bcrypt.hash(password,10);
-
-const user = new User({
-username,
-email,
-password:hashedPassword
+ res.json({message:"User registered"});
 });
 
-await user.save();
+router.post("/login", async(req,res)=>{
+ const {email,password}=req.body;
 
-res.json({message:"User registered"});
+ const user = await User.findOne({email});
 
-}catch(err){
+ if(!user) return res.status(404).json("User not found");
 
-res.status(400).json({message:"User already exists"});
+ const valid = await bcrypt.compare(password,user.password);
 
-}
+ if(!valid) return res.status(400).json("Wrong password");
 
-});
+ const token = jwt.sign({id:user._id},"secretkey");
 
-// LOGIN
-router.post("/login", async (req,res)=>{
-
-const {email,password} = req.body;
-
-const user = await User.findOne({email});
-
-if(!user){
-return res.status(404).json({message:"User not found"});
-}
-
-const valid = await bcrypt.compare(password,user.password);
-
-if(!valid){
-return res.status(401).json({message:"Invalid password"});
-}
-
-const token = jwt.sign(
-{ id:user._id, username:user.username },
-SECRET,
-{ expiresIn:"1d" }
-);
-
-res.json({
-token,
-username:user.username
-});
-
+ res.json({token,user});
 });
 
 export default router;

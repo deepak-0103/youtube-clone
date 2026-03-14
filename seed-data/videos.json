@@ -1,0 +1,221 @@
+[{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5d8"
+  },
+  "title": "Learn React in 30 Minutes",
+  "thumbnailUrl": "https://i.ytimg.com/vi/Tn6-PIqc4UM/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/Tn6-PIqc4UM",
+  "channelName": "Code With John",
+  "views": 15200,
+  "category": "Programming",
+  "dislikes": 1,
+  "likes": 3
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5d9"
+  },
+  "title": "Node.js Crash Course",
+  "thumbnailUrl": "https://i.ytimg.com/vi/fBNz5xF-Kx4/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/fBNz5xF-Kx4",
+  "channelName": "Programming Hub",
+  "views": 28900,
+  "category": "Programming",
+  "dislikes": 3,
+  "likes": 4
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5da"
+  },
+  "title": "JavaScript Full Course for Beginners",
+  "thumbnailUrl": "https://i.ytimg.com/vi/PkZNo7MFNFg/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/PkZNo7MFNFg",
+  "channelName": "freeCodeCamp",
+  "views": 1200000,
+  "category": "Programming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5db"
+  },
+  "title": "Build a MERN Stack App",
+  "thumbnailUrl": "https://i.ytimg.com/vi/7CqJlxBYj-M/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/7CqJlxBYj-M",
+  "channelName": "Code Academy",
+  "views": 45000,
+  "category": "Programming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5dc"
+  },
+  "title": "Relaxing Piano Music",
+  "thumbnailUrl": "https://i.ytimg.com/vi/2OEL4P1Rz04/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/2OEL4P1Rz04",
+  "channelName": "Peaceful Music",
+  "views": 890000,
+  "category": "Music"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5dd"
+  },
+  "title": "Top Gaming Moments 2025",
+  "thumbnailUrl": "https://i.ytimg.com/vi/DLu2CFDBJk0/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/DLu2CFDBJk0",
+  "channelName": "Pro Gamer",
+  "views": 210000,
+  "category": "Gaming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5de"
+  },
+  "title": "Travel Guide Switzerland",
+  "thumbnailUrl": "https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/aqz-KE-bpKQ",
+  "channelName": "Travel World",
+  "views": 450000,
+  "category": "Travel"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5df"
+  },
+  "title": "Morning Walk in Interlaken",
+  "thumbnailUrl": "https://i.ytimg.com/vi/tgbNymZ7vqY/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/tgbNymZ7vqY",
+  "channelName": "Nature Walks",
+  "views": 76000,
+  "category": "Travel"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e0"
+  },
+  "title": "Learn Python in 1 Hour",
+  "thumbnailUrl": "https://i.ytimg.com/vi/kqtD5dpn9C8/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/kqtD5dpn9C8",
+  "channelName": "Programming Simplified",
+  "views": 640000,
+  "category": "Programming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e1"
+  },
+  "title": "HTML & CSS Crash Course",
+  "thumbnailUrl": "https://i.ytimg.com/vi/UB1O30fR-EE/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/UB1O30fR-EE",
+  "channelName": "Web Dev Simplified",
+  "views": 980000,
+  "category": "Programming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e2"
+  },
+  "title": "React Hooks Explained",
+  "thumbnailUrl": "https://i.ytimg.com/vi/dpw9EHDh2bM/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/dpw9EHDh2bM",
+  "channelName": "React Mastery",
+  "views": 42000,
+  "category": "Programming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e3"
+  },
+  "title": "Epic Mountain Drone Shots",
+  "thumbnailUrl": "https://i.ytimg.com/vi/Scxs7L0vhZ4/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/Scxs7L0vhZ4",
+  "channelName": "Drone World",
+  "views": 150000,
+  "category": "Travel"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e4"
+  },
+  "title": "Top 10 Open World Games",
+  "thumbnailUrl": "https://i.ytimg.com/vi/3fumBcKC6RE/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/3fumBcKC6RE",
+  "channelName": "Gaming Central",
+  "views": 310000,
+  "category": "Gaming"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e5"
+  },
+  "title": "Calm Study Music Mix",
+  "thumbnailUrl": "https://i.ytimg.com/vi/lFcSrYw-ARY/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/lFcSrYw-ARY",
+  "channelName": "Focus Music",
+  "views": 720000,
+  "category": "Music"
+},
+{
+  "_id": {
+    "$oid": "69b48316d2030b37f1e8a5e6"
+  },
+  "title": "Data Structures Explained",
+  "thumbnailUrl": "https://i.ytimg.com/vi/RBSGKlAvoiM/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/RBSGKlAvoiM",
+  "channelName": "CS Tutorials",
+  "views": 190000,
+  "category": "Education"
+},
+{
+  "_id": {
+    "$oid": "69b520550039abe5871c6530"
+  },
+  "title": "Blinding Lights",
+  "description": "Official music video by The Weeknd",
+  "thumbnail": "https://i.ytimg.com/vi/4NRXx6U8ABQ/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/4NRXx6U8ABQ",
+  "views": 4500000,
+  "likes": 100000,
+  "dislikes": 1600,
+  "channelName": "CodeWithDeepak"
+},
+{
+  "_id": {
+    "$oid": "69b520550039abe5871c6531"
+  },
+  "title": "Faded",
+  "description": "Alan Walker official music video",
+  "thumbnail": "https://i.ytimg.com/vi/60ItHLz5WEA/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/60ItHLz5WEA",
+  "views": 3900000,
+  "likes": 89000,
+  "dislikes": 1400,
+  "channelName": "CodeWithDeepak"
+},
+{
+  "_id": {
+    "$oid": "69b520550039abe5871c6532"
+  },
+  "title": "See You Again",
+  "description": "Wiz Khalifa ft. Charlie Puth music video",
+  "thumbnail": "https://i.ytimg.com/vi/RgKAFK5djSk/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/RgKAFK5djSk",
+  "views": 6400000,
+  "likes": 155000,
+  "dislikes": 3200,
+  "channelName": "CodeWithDeepak"
+},
+{
+  "_id": {
+    "$oid": "69b520550039abe5871c6533"
+  },
+  "title": "Believer",
+  "description": "Imagine Dragons official video",
+  "thumbnail": "https://i.ytimg.com/vi/7wtfhZwyrcc/maxresdefault.jpg",
+  "videoUrl": "https://www.youtube.com/embed/7wtfhZwyrcc",
+  "views": 4800000,
+  "likes": 112000,
+  "dislikes": 1900,
+  "channelName": "CodeWithDeepak"
+}]

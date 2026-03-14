@@ -19,6 +19,11 @@ loadSuggested();
 loadComments();
 },[id]);
 
+useEffect(()=>{
+
+API.put(`/videos/view/${id}`);
+
+},[id]);
 // Load selected video
 const loadVideo = async ()=>{
 try{

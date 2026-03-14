@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "69b4950ed8a0488fd6c77e8e"
+  },
+  "username": "12345",
+  "email": "deepakkumar.kumar403@gmail.com",
+  "password": "$2a$10$eJuu/Umj42i8TcZT66vLi.7P38ZWPyQjirOo6ExZQraQr3mHbj88m",
+  "avatar": "https://i.pravatar.cc/150",
+  "channels": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69b51f180e2e4e2468eb7580"
+  },
+  "username": "Code",
+  "email": "qwerty",
+  "password": "$2a$10$gnfXSqfu7inoEUHANceyEuz1102Hek2tSEuZqknmztBLCH7DIa.OG",
+  "avatar": "https://i.pravatar.cc/150",
+  "channels": [],
+  "__v": 0
+}]

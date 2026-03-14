@@ -4,19 +4,64 @@ font-family:Arial;
 background:#f9f9f9;
 }
 
+/* HEADER */
+
 .header{
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:10px;
+padding:10px 20px;
 background:white;
 border-bottom:1px solid #ddd;
+gap:15px;
 }
 
-.header input{
+.menu-btn{
+font-size:20px;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+.logo{
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+
+.youtube-logo{
+height:30px;
+cursor:pointer;
+}
+
+.search-bar{
 width:40%;
 padding:8px;
+border:1px solid #ccc;
+border-radius:4px;
 }
+
+.header-right{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.signin-btn,
+.logout-btn{
+padding:6px 12px;
+border:none;
+background:#ff0000;
+color:white;
+border-radius:4px;
+cursor:pointer;
+}
+
+.username{
+font-weight:bold;
+}
+
+/* SIDEBAR */
 
 .sidebar{
 width:200px;
@@ -28,6 +73,8 @@ height:100%;
 padding:10px;
 border-right:1px solid #ddd;
 }
+
+/* FILTER BUTTONS */
 
 .filters{
 display:flex;
@@ -43,6 +90,8 @@ background:white;
 cursor:pointer;
 }
 
+/* VIDEO GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
@@ -50,26 +99,19 @@ gap:20px;
 padding:20px;
 }
 
-.grid img{
-width:100%;
-border-radius:8px;
-}
-
 @media(max-width:768px){
-
 .grid{
 grid-template-columns:1fr 1fr;
 }
-
 }
 
 @media(max-width:480px){
-
 .grid{
 grid-template-columns:1fr;
 }
-
 }
+
+/* VIDEO CARD */
 
 .video-card{
 background:white;
@@ -115,47 +157,7 @@ font-size:13px;
 color:#555;
 }
 
-.logo{
-display:flex;
-align-items:center;
-text-decoration:none;
-}
-
-.youtube-logo{
-height:30px;
-margin-left:10px;
-cursor:pointer;
-}
-
-.header{
-display:flex;
-align-items:center;
-gap:15px;
-padding:10px 20px;
-background:white;
-border-bottom:1px solid #ddd;
-}
-
-.suggested{
-flex:1;
-}
-
-.suggested .video-card{
-margin-bottom:15px;
-}
-
-.video-page{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-.like-buttons{
-display:flex;
-gap:10px;
-margin:10px 0;
-}
-
+/* VIDEO PLAYER PAGE */
 
 .video-page{
 display:flex;
@@ -176,11 +178,15 @@ max-width:350px;
 margin-bottom:15px;
 }
 
+/* LIKE BUTTONS */
+
 .like-buttons{
 display:flex;
 gap:10px;
 margin:10px 0;
 }
+
+/* COMMENTS */
 
 .comment-box{
 display:flex;
@@ -206,52 +212,7 @@ border-bottom:1px solid #ddd;
 padding:8px 0;
 }
 
-.header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:10px 20px;
-border-bottom:1px solid #ddd;
-background:white;
-}
-
-.menu-btn{
-font-size:20px;
-background:none;
-border:none;
-cursor:pointer;
-}
-
-.logo img{
-height:30px;
-}
-
-.search-bar{
-width:40%;
-padding:8px;
-border:1px solid #ccc;
-border-radius:4px;
-}
-
-.header-right{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.signin-btn,
-.logout-btn{
-padding:6px 12px;
-border:none;
-background:#ff0000;
-color:white;
-border-radius:4px;
-cursor:pointer;
-}
-
-.username{
-font-weight:bold;
-}
+/* AUTH PAGE */
 
 .auth-page{
 width:300px;
@@ -287,6 +248,15 @@ cursor:pointer;
 margin-left:5px;
 }
 
+/* CHANNEL ICON */
+
+.channel-info{
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
 .channel-icon{
 width:28px;
 height:28px;
@@ -294,9 +264,78 @@ border-radius:50%;
 object-fit:cover;
 }
 
-.channel-info{
+.channel-link{
+text-decoration:none;
+color:black;
+}
+
+/* CHANNEL PAGE */
+
+.video-channel-page{
+text-align:center;
+margin-top:60px;
+}
+
+.channel-avatar{
+width:100px;
+height:100px;
+border-radius:50%;
+}
+
+/* CHANNEL DASHBOARD */
+
+.channel-dashboard{
+padding:20px;
+max-width:1000px;
+margin:auto;
+}
+
+.channel-header{
 display:flex;
 align-items:center;
-gap:8px;
-margin-top:8px;
+gap:15px;
+}
+
+.upload-form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:400px;
+}
+
+.upload-form input{
+padding:8px;
+}
+
+.upload-form button{
+padding:10px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+/* VIDEO TABLE */
+
+.video-table{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+}
+
+.video-table th,
+.video-table td{
+border-bottom:1px solid #ddd;
+padding:10px;
+text-align:left;
+}
+
+.table-thumbnail{
+width:120px;
+border-radius:6px;
+}
+
+.video-table button{
+padding:6px 10px;
+cursor:pointer;
 }

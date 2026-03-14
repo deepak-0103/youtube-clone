@@ -10,6 +10,7 @@ import commentRoutes from "./routes/commentRoutes.js";
 import likeRoutes from "./routes/likes.js";
 
 
+
 dotenv.config();
 
 const app = express();
@@ -22,8 +23,9 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use("/api/auth", authRoutes);
 app.use("/api/videos", videoRoutes);
-app.use("/api/channels", channelRoutes);
+app.use("/api/channel", channelRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/videos",likeRoutes);
 
 app.listen(5000, ()=>console.log("Server running on port 5000"));
+
