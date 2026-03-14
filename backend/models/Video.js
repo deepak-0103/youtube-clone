@@ -1,15 +1,23 @@
+import mongoose from "mongoose";
+
 const videoSchema = new mongoose.Schema({
-  title: String,
-  thumbnailUrl: String,
-  description: String,
-  videoUrl: String,
-  channelId: String,
-  uploader: String,
-  views: Number,
-  likes: Number,
-  dislikes: Number,
-  category: String,
-  uploadDate: Date
+
+title:String,
+description:String,
+thumbnailUrl:String,
+videoUrl:String,
+channelName:String,
+views:Number,
+likes:{
+type:Number,
+default:0
+},
+dislikes:{
+type:Number,
+default:0
+},
+category:String
+
 });
 
-export default mongoose.model("Video", videoSchema);
+export default mongoose.model("Video",videoSchema);
